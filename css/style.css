@@ -1,0 +1,223 @@
+/* Root Variables */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --accent-color: #FF5E79;
+    --background-color: #F5F7FA;
+    --text-color: #4A4A4A;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #E0E0E0;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Input Section */
+.input-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Text Input */
+#text-input {
+    width: 100%;
+    height: 200px; /* Increased height */
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#text-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+/* Controls */
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.control-group input[type="number"],
+.control-group input[type="range"] {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.control-group input[type="range"] {
+    width: 150px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    margin-left: auto;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.button-group button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    color: #ffffff;
+    border-radius: 6px;
+    margin: 0 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-group button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(80, 227, 194, 0.4);
+}
+
+/* Current Word Display */
+#current-word {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 80px; /* Increased font size */
+    transition: font-size 0.3s;
+}
+
+/* Progress Bar */
+#progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: width 0.3s;
+}
+
+/* Full Text Display */
+#full-text {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    line-height: 1.8;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+#full-text span {
+    cursor: pointer;
+    padding: 2px 4px;
+    margin: 2px 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#full-text span:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+#full-text .highlight {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .control-group {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #current-word {
+        font-size: 60px; /* Adjusted for smaller screens */
+    }
+}

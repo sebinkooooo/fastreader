@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speed Reader</title>
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Speed Reader</h1>
+
+        <div class="input-section">
+            <textarea id="text-input" placeholder="Paste your text here..."></textarea>
+            <div id="controls">
+                <div class="control-group">
+                    <label for="wpm">Words per minute:</label>
+                    <input type="number" id="wpm" value="300" min="50" max="1000" step="50">
+                </div>
+                <div class="control-group">
+                    <label for="font-size">Font Size:</label>
+                    <input type="range" id="font-size" min="30" max="100" value="80">
+                </div>
+                <div class="control-group theme-toggle">
+                    <button id="theme-toggle">🌙 Dark Mode</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="start-button">Start</button>
+            <button id="pause-button">Pause</button>
+            <button id="reset-button">Reset</button>
+        </div>
+
+        <div id="current-word"></div>
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <h2>Full Text (Click on any word to start reading from there):</h2>
+        <div id="full-text"></div>
+    </div>
+
+    <!-- Link to the script file -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
